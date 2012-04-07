@@ -31,6 +31,7 @@ public class MinSpanTree
         {
             Queue[i] = Double.MAX_VALUE;    
             Parent[i] = -1;
+            verts.get(i).Marked = false;
         }
         addNode(0);
         
@@ -39,6 +40,7 @@ public class MinSpanTree
     private int addNode(int par)
     {
         GraphVertex p = verts.get(par);
+        p.Marked = true;
         int unmarked = 0;
         
         // Update min Distance
@@ -46,10 +48,13 @@ public class MinSpanTree
         GraphVertex gv;
         for(int i  = 0; i < verts.size(); i++)
         {
+            
+            if(i==par) continue;
             gv = verts.get(i);
             if(!gv.Marked)
             {
                 unmarked++;
+                
                 t_min = p.distanceTo(gv);
                 if(t_min < Queue[i])
                 {
@@ -75,6 +80,7 @@ public class MinSpanTree
         //Add it and mark it
         GraphVertex conn_par = verts.get(Parent[minI]);
         GraphVertex conn_child = verts.get(minI);
+        Queue[minI] = Double.MAX_VALUE;
         conn_child.connectTo(conn_par);
         conn_child.Marked = true;
         unmarked--;

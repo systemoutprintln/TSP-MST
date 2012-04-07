@@ -17,6 +17,7 @@ public class GraphVertex
     
     public GraphVertex(int x, int y)
     {
+        conn = new ArrayList<GraphVertex>();
         p = new Point(x,y);
     }
     
