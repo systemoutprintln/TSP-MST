@@ -13,6 +13,7 @@ public class GraphVertex
 {
     private Point p;
     private ArrayList<GraphVertex> conn;
+    public boolean Marked = false;
     
     public GraphVertex(int x, int y)
     {
@@ -28,6 +29,15 @@ public class GraphVertex
     public double distanceTo(GraphVertex gv)
     {
         return p.distance(gv.p);
+    }
+    
+    public Point getLocation()
+    {
+        return p;
+    }
+    public  ArrayList<GraphVertex> getConnected()
+    {
+        return conn;
     }
     
 

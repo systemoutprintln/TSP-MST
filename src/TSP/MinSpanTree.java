@@ -31,6 +31,7 @@ public class MinSpanTree
             Queue[i] = Double.MAX_VALUE;    
             Parent[i] = -1;
         }
+        addNode(0);
         
     }
     
