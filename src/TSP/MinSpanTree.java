@@ -22,6 +22,7 @@ public class MinSpanTree
     {
         verts = Vertices;
         Queue = new double[verts.size()];
+        Parent = new int[verts.size()];
     }
     
     public void generateTree()
