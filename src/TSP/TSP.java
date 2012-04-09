@@ -11,8 +11,10 @@ import java.util.ArrayList;
  */
 public class TSP 
 {
-    static ArrayList<GraphVertex> generateTSP(ArrayList<GraphVertex> verts)
+    //Be sure to generate the MST before calling
+    public static ArrayList<GraphVertex> generateTSP(MinSpanTree MST)
       {
+          ArrayList<GraphVertex> verts = MST.getVerticies();
           double dist=0;
           ArrayList<GraphVertex> tsp = new ArrayList<GraphVertex>();
 

@@ -94,6 +94,11 @@ public class MinSpanTree
         
     }
     
+    public ArrayList<GraphVertex> getVerticies()
+    {
+        return verts;
+    }
+    
     
 
 }

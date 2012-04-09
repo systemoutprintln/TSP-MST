@@ -23,7 +23,7 @@ public class Grapher extends JPanel
             MinSpanTree mst = new MinSpanTree(verts);
             mst.generateTree();
             
-            TSPath = TSP.generateTSP(verts);
+            TSPath = TSP.generateTSP(mst);
             
             
             
