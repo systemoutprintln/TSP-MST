@@ -1,11 +1,6 @@
-
 package TSP;
 
-/**
- *
- * Drew McDermott
- * adm75@pitt.edu
- */
+
 import java.util.ArrayList;
 import java.util.List;
 import java.awt.*;
